@@ -1,0 +1,159 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.5rem;
+}
+
+
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .75em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  gap: .10em;
+  justify-content: center;
+  position: relative;
+  top: 100px;
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: .1em;
+  align-items: center;
+  z-index: 2;
+}
+
+.segment {
+  display: flex;
+  gap: .1em;
+}
+
+.segment-title {
+  font-size: 1rem;
+  color:#ff6f3c;
+  display: none;
+}
+
+
+
+#hdr {
+  display:block;
+  width: 100%;
+  
+  background-image:linear-gradient(to right, #262c65,#191970);
+  opacity: 0.8;
+  height: 300px;
+
+}
+
+.hdr-segment {
+  display:flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.lgbq {
+  
+  position:absolute;
+  height: auto;
+  width: auto;
+  transform: scale(1.5);
+}
+
+.whitePatt {
+ 
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.BungkusJam{
+
+    display: inline-flex;
+    position: relative;
+    top: -195px;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+}
+
+.imgBungkusJam {
+  transform: scale(1.5);
+}
+
+.TeksBawah {
+  display: block;
+  position: relative;
+  top: -150px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#daa520;
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}

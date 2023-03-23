@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Informasi Masjid Al Qalam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/> -->
+    <link rel="stylesheet" href="static/styles/w3.css"/>
+    <link href="static/styles/style.css" rel="stylesheet"/>
+
+    <script src="static/scripts/PrayTimes.js"></script>
+    <script src="static/scripts/jadwalSholat.js"></script>
+    <script src="static/scripts/Waktu.js"></script>
+    <script src="static/scripts/AntiSleep.js"></script>
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="hdr">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img class="lgbq" src="media/images/logo-bq-white.png"/>
+        </div>
+        <div class="grid-item">
+            <img class="lgm" src="media/images/logo-masjid.png"/>
+        </div>
+        <div class="grid-item">
+            <div id="jamJalil" class="jam">12:18:40</div>
+            <div class="tanggal">
+                <div id="TglMasehiJl" class="milad">TanggalMasehi</div>
+                <div id="TglHijriahJl" class="hijry">TanggalHijriah</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container2">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+        </div>
+    </div>
+</div>
+<!-- END of HEADER -->
+
+<!-- BACKGROUND SLIDER -->
+<div class="bg" style="align-items: center;">
+    <video style="height: 105vh; width: 105vw; margin-top: -25px;" autoplay loop muted id="bg-video">
+        <source src="media/videos/slider-jam-digital.m4v" type="video/mp4">
+    </video>
+    
+    <!-- <img
+      class="mySlides w3-animate-fading"
+      src="media/images/masjid.png"
+      style="width: 100%"
+    />
+    <img
+      class="mySlides w3-animate-fading"
+      src="media/images/landmark.png"
+      style="width: 100%"
+    />
+    <img
+      class="mySlides w3-animate-fading"
+      src="media/images/gedung.png"
+      style="width: 100%"
+    /> -->
+</div>
+<!-- END of BACKGROUND SLIDER -->
+
+<div class="ws">
+    <div class="grid-container">
+        <div class="grid-item colws">
+            <div class="hs colorws">SUBUH</div>
+            <div id="table-jdw-sholat-Subuh" class="hs colorjam">Subuh</div>
+            <div class="hs colorws">SYURUQ</div>
+            <div id="table-jdw-sholat-Syuruq" class="hs colorjam">Syuruq</div>
+            <div class="hs colorws">ZUHUR</div>
+            <div id="table-jdw-sholat-Dzuhur" class="hs colorjam">Zuhur</div>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item colws ml15">
+            <div class="hs colorws">ASAR</div>
+            <div id="table-jdw-sholat-Ashar" class="hs colorjam">Asar</div>
+            <div class="hs colorws">MAGRIB</div>
+            <div id="table-jdw-sholat-Maghrib" class="hs colorjam">Magrib</div>
+            <div class="hs colorws">ISYA</div>
+            <div id="table-jdw-sholat-Isya" class="hs colorjam">Isya</div>
+        </div>
+    </div>
+</div>
+
+<div class="rt">
+    <p>BQ City, Jago Coding Jago Ngaji</p>
+</div>
+</body>
+<audio id="alarm_audio">
+</audio>
+<!--- Javascript -->
+<script>
+  window.onload = function () {
+    jadwal_sholat_depag()
+  };
+  new Waktu('#jamJalil');
+</script>
+<!-- <script src="static/scripts/Carousel.js"></script> -->
+<script src="static/scripts/TanggalHijri.js"></script>
+
+</html>
