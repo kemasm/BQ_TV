@@ -45,8 +45,8 @@ class Waktu {
 		let maghrib = document.getElementById("table-jdw-sholat-Maghrib").innerText + ':00';
 		let isya = document.getElementById("table-jdw-sholat-Isya").innerText + ':00';
 		
-		// let lstSholat = [subuh, syuruq, dzuhur,ashar,maghrib,isya];
-		let lstSholat = ['08:08:00', '18:13:00', '18:06:15','17:51:00','15:56:00','15:57:00'];
+		let lstSholat = [subuh, syuruq, dzuhur,ashar,maghrib,isya];
+		// let lstSholat = ['08:08:00', '18:13:00', '18:06:15','17:51:00','15:56:00','15:57:00'];
 
 
 		if ((time == lstSholat[0]) || (time == lstSholat[1]) || (time == lstSholat[2]) ||
