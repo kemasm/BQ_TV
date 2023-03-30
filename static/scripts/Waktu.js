@@ -46,17 +46,20 @@ class Waktu {
 		let isya = document.getElementById("table-jdw-sholat-Isya").innerText + ':00';
 		
 		let lstSholat = [subuh, syuruq, dzuhur,ashar,maghrib,isya];
-		// let lstSholat = ['08:08:00', '18:13:00', '18:06:15','17:51:00','15:56:00','15:57:00'];
-
+		// let lstSholat = ['14:44:00', '18:13:00', '18:06:15','17:51:00','15:56:00','14:41:00'];
+    let is_ramadhan = true
 
 		if ((time == lstSholat[0]) || (time == lstSholat[1]) || (time == lstSholat[2]) ||
 			(time == lstSholat[3]) || (time == lstSholat[4]) || (time == lstSholat[5])) {
         if ((t.getDay() == 5  && (time == lstSholat[2])) || (time == lstSholat[1])) {
           // waktu khotbah atau syuruk
+        } else if(time == lstSholat[5] && is_ramadhan){
+          console.log('test')
+          this.playAlarm();
+          window.open("WaktuIqamahTarawih.html","_self");
         } else {
           this.playAlarm();
           window.open("WaktuIqamah.html","_self");
-          // window.open("http://binaqurani.sch.id/simaq/WaktuIqamah.html","_self");
         }
     }
 		

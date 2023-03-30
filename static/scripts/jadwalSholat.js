@@ -2,7 +2,9 @@
 function jadwal_sholat_depag(){
 //------Begin Program
 	//setInterval(jadwal_sholat_depag,1000) //14400000
-	prayTimes.tune({imsak:2,subuh:2,dhuhur:2,ashar:2,maghrib:2,isya:2,sunrise:15});
+	// prayTimes.tune({imsak:2,subuh:2,dhuhur:2,ashar:2,maghrib:2,isya:2,sunrise:15});
+	prayTimes.tune({imsak:0,subuh:0,dhuhur:0,ashar:0,maghrib:0,isya:0,sunrise:15});
+
 	var date=new Date();
 	/*var times=prayTimes.getTimes(date,geo,timezone);*/
 	var timesholat=prayTimes.getTimes(date,[-6.58916600,106.79299900,250.89],+7);
